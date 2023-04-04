@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blocked Users</title>
+</head>
+<body>
+<h1>Blocked Users info:</h1>
+<table>
+
+    <tbody>
+    <p><span th:text="${#maps.isEmpty(blockedUsers)} ? 'There are no blocked users' : 'Blocked users'"></span>.</p>
+    <tr th:if="${#arrays.length(blockedUsers)}" th:each="user : ${blockedUsers}">
+        <td th:text="${user.key}"></td>
+        <td th:text="${user.value}"></td>
+    </tr>
+    </tbody>
+</table>
+<div th:insert="fragments/header::header"></div>
+</body>
+</html>

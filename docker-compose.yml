@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    container_name: postgresql_jmp_adv
+    image: postgres:14.5
+    # volumes:
+    #   - ~/volumes/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "127.0.0.1:4321:5432"
