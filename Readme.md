@@ -1,4 +1,4 @@
-1. run docker container: `docker compose -f .\admin-tx-service-app\src\main\docker\docker-compose.yml up -d`
+1. run docker container: `docker compose -f .\jmp-adv-security\src\main\docker\docker-compose.yml up -d`
 2. run app
 3. go to http://localhost:8080
 
